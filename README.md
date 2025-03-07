@@ -1,3 +1,17 @@
+## Fork
+
+This is a fork that dockerises the app for executing the script without the need and hassle of installing Python and its dependencies.
+
+How to: 
+1. Clone this repository
+2. Build the image with `docker image build -t merge-gph-metadata .`
+3. Execute the script editing your source and destination folder :
+```
+docker run --rm -v '$SOURCE:/app/source_folder' -v $OUTPUT:/app/output_folder merge-gph-metadata /app/source_folder /app/output_folder -w "edited"
+```
+
+For detailed options, please check the original README below.
+
 ## Google photos takeout metadata merging into their images
 
 Original windows based version: [GooglePhotosMatcher](https://github.com/anderbggo/GooglePhotosMatcher)
